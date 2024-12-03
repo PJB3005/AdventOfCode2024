@@ -5,10 +5,11 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>Day2.Two</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Day1\Day1.csproj" />
+      <ProjectReference Include="..\Day02\Day02.csproj" />
     </ItemGroup>
 
 </Project>
