@@ -1,0 +1,833 @@
+{
+    "blueprint": {
+        "icons": [
+            {
+                "signal": {
+                    "name": "arithmetic-combinator"
+                },
+                "index": 1
+            }
+        ],
+        "entities": [
+            {
+                "entity_number": 1,
+                "name": "pushbutton",
+                "position": {
+                    "x": -120.5,
+                    "y": -118.5
+                },
+                "direction": 8,
+                "control_behavior": {
+                    "sections": {
+                        "sections": [
+                            {
+                                "index": 1,
+                                "filters": [
+                                    {
+                                        "index": 1,
+                                        "type": "virtual",
+                                        "name": "signal-check",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "is_on": false
+                }
+            },
+            {
+                "entity_number": 2,
+                "name": "decider-combinator",
+                "position": {
+                    "x": -120.5,
+                    "y": -117
+                },
+                "direction": 8,
+                "control_behavior": {
+                    "decider_conditions": {
+                        "conditions": [
+                            {
+                                "first_signal": {
+                                    "type": "virtual",
+                                    "name": "signal-check"
+                                },
+                                "comparator": ">"
+                            },
+                            {
+                                "first_signal": {
+                                    "type": "virtual",
+                                    "name": "signal-C"
+                                },
+                                "second_signal": {
+                                    "type": "virtual",
+                                    "name": "signal-L"
+                                },
+                                "compare_type": "and"
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "signal": {
+                                    "type": "virtual",
+                                    "name": "signal-check"
+                                },
+                                "copy_count_from_input": false
+                            },
+                            {
+                                "signal": {
+                                    "type": "virtual",
+                                    "name": "signal-C"
+                                },
+                                "copy_count_from_input": false
+                            },
+                            {
+                                "signal": {
+                                    "type": "virtual",
+                                    "name": "signal-C"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "entity_number": 3,
+                "name": "decider-combinator",
+                "position": {
+                    "x": -117,
+                    "y": -117.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "decider_conditions": {
+                        "conditions": [
+                            {
+                                "first_signal": {
+                                    "type": "virtual",
+                                    "name": "signal-check"
+                                },
+                                "comparator": ">"
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "signal": {
+                                    "type": "virtual",
+                                    "name": "signal-everything"
+                                },
+                                "networks": {
+                                    "red": true,
+                                    "green": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "entity_number": 4,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -117,
+                    "y": -114.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 0,
+                        "operation": "+",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 5,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -115.5,
+                    "y": -116
+                },
+                "direction": 8,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": -1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 6,
+                "name": "selector-combinator",
+                "position": {
+                    "x": -122.5,
+                    "y": -113
+                },
+                "control_behavior": {
+                    "operation": "count",
+                    "count_signal": {
+                        "type": "virtual",
+                        "name": "signal-L"
+                    }
+                }
+            },
+            {
+                "entity_number": 7,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -120.5,
+                    "y": -113
+                },
+                "direction": 8,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-C"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-C"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 8,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -119.5,
+                    "y": -113
+                },
+                "direction": 8,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 9,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -118.5,
+                    "y": -113
+                },
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 10,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -117.5,
+                    "y": -113
+                },
+                "direction": 8,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 11,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -116.5,
+                    "y": -113
+                },
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 12,
+                "name": "decider-combinator",
+                "position": {
+                    "x": -114.5,
+                    "y": -114
+                },
+                "control_behavior": {
+                    "decider_conditions": {
+                        "conditions": [
+                            {
+                                "first_signal": {
+                                    "type": "virtual",
+                                    "name": "signal-check"
+                                },
+                                "comparator": ">",
+                                "first_signal_networks": {
+                                    "red": false,
+                                    "green": true
+                                }
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "signal": {
+                                    "type": "virtual",
+                                    "name": "signal-everything"
+                                },
+                                "networks": {
+                                    "red": true,
+                                    "green": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "entity_number": 13,
+                "name": "constant-combinator",
+                "position": {
+                    "x": -120.5,
+                    "y": -110.5
+                },
+                "control_behavior": {
+                    "sections": {
+                        "sections": [
+                            {
+                                "index": 1,
+                                "filters": [
+                                    {
+                                        "index": 1,
+                                        "type": "virtual",
+                                        "name": "signal-0",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 4
+                                    },
+                                    {
+                                        "index": 2,
+                                        "type": "virtual",
+                                        "name": "signal-1",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 3
+                                    },
+                                    {
+                                        "index": 3,
+                                        "type": "virtual",
+                                        "name": "signal-2",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 5
+                                    },
+                                    {
+                                        "index": 4,
+                                        "type": "virtual",
+                                        "name": "signal-3",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 3
+                                    },
+                                    {
+                                        "index": 5,
+                                        "type": "virtual",
+                                        "name": "signal-4",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 9
+                                    },
+                                    {
+                                        "index": 6,
+                                        "type": "virtual",
+                                        "name": "signal-5",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 3
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "entity_number": 14,
+                "name": "constant-combinator",
+                "position": {
+                    "x": -120.5,
+                    "y": -111.5
+                },
+                "control_behavior": {
+                    "sections": {
+                        "sections": [
+                            {
+                                "index": 1,
+                                "filters": [
+                                    {
+                                        "index": 1,
+                                        "type": "virtual",
+                                        "name": "signal-0",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 3
+                                    },
+                                    {
+                                        "index": 2,
+                                        "type": "virtual",
+                                        "name": "signal-1",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 4
+                                    },
+                                    {
+                                        "index": 3,
+                                        "type": "virtual",
+                                        "name": "signal-2",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 2
+                                    },
+                                    {
+                                        "index": 4,
+                                        "type": "virtual",
+                                        "name": "signal-3",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 1
+                                    },
+                                    {
+                                        "index": 5,
+                                        "type": "virtual",
+                                        "name": "signal-4",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 3
+                                    },
+                                    {
+                                        "index": 6,
+                                        "type": "virtual",
+                                        "name": "signal-5",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 3
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "entity_number": 15,
+                "name": "selector-combinator",
+                "position": {
+                    "x": -118,
+                    "y": -110.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "operation": "select",
+                    "select_max": false,
+                    "index_signal": {
+                        "type": "virtual",
+                        "name": "signal-C"
+                    }
+                }
+            },
+            {
+                "entity_number": 16,
+                "name": "selector-combinator",
+                "position": {
+                    "x": -118,
+                    "y": -111.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "operation": "select",
+                    "select_max": false,
+                    "index_signal": {
+                        "type": "virtual",
+                        "name": "signal-C"
+                    }
+                }
+            },
+            {
+                "entity_number": 17,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -116,
+                    "y": -110.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": -1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-V"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 18,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -116,
+                    "y": -111.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-V"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 19,
+                "name": "decider-combinator",
+                "position": {
+                    "x": -114,
+                    "y": -110.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "decider_conditions": {
+                        "conditions": [
+                            {
+                                "first_signal": {
+                                    "type": "virtual",
+                                    "name": "signal-each"
+                                }
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "signal": {
+                                    "type": "virtual",
+                                    "name": "signal-each"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "entity_number": 20,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -114,
+                    "y": -111.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 21,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -112,
+                    "y": -110.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": -2,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            },
+            {
+                "entity_number": 22,
+                "name": "arithmetic-combinator",
+                "position": {
+                    "x": -112,
+                    "y": -111.5
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "arithmetic_conditions": {
+                        "first_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        },
+                        "second_constant": 1,
+                        "operation": "*",
+                        "output_signal": {
+                            "type": "virtual",
+                            "name": "signal-each"
+                        }
+                    }
+                }
+            }
+        ],
+        "wires": [
+            [
+                1,
+                1,
+                2,
+                1
+            ],
+            [
+                1,
+                2,
+                3,
+                2
+            ],
+            [
+                2,
+                1,
+                2,
+                3
+            ],
+            [
+                2,
+                2,
+                6,
+                4
+            ],
+            [
+                2,
+                4,
+                7,
+                2
+            ],
+            [
+                3,
+                1,
+                4,
+                3
+            ],
+            [
+                3,
+                3,
+                5,
+                1
+            ],
+            [
+                4,
+                1,
+                4,
+                3
+            ],
+            [
+                4,
+                1,
+                5,
+                3
+            ],
+            [
+                4,
+                3,
+                12,
+                3
+            ],
+            [
+                6,
+                1,
+                14,
+                1
+            ],
+            [
+                7,
+                2,
+                8,
+                2
+            ],
+            [
+                7,
+                4,
+                16,
+                2
+            ],
+            [
+                8,
+                4,
+                9,
+                2
+            ],
+            [
+                9,
+                4,
+                10,
+                2
+            ],
+            [
+                10,
+                4,
+                11,
+                2
+            ],
+            [
+                11,
+                4,
+                12,
+                2
+            ],
+            [
+                12,
+                1,
+                22,
+                3
+            ],
+            [
+                13,
+                1,
+                15,
+                1
+            ],
+            [
+                14,
+                1,
+                16,
+                1
+            ],
+            [
+                15,
+                2,
+                16,
+                2
+            ],
+            [
+                15,
+                3,
+                17,
+                1
+            ],
+            [
+                16,
+                3,
+                18,
+                1
+            ],
+            [
+                17,
+                3,
+                18,
+                3
+            ],
+            [
+                18,
+                3,
+                19,
+                1
+            ],
+            [
+                19,
+                1,
+                20,
+                1
+            ],
+            [
+                19,
+                3,
+                21,
+                1
+            ],
+            [
+                20,
+                3,
+                22,
+                1
+            ],
+            [
+                21,
+                3,
+                22,
+                3
+            ]
+        ],
+        "item": "blueprint",
+        "version": 562949954928640
+    }
+}

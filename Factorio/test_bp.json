@@ -1,0 +1,51 @@
+{
+    "blueprint": {
+        "icons": [
+            {
+                "signal": {
+                    "name": "constant-combinator"
+                },
+                "index": 1
+            }
+        ],
+        "entities": [
+            {
+                "entity_number": 1,
+                "name": "constant-combinator",
+                "position": {
+                    "x": -123.5,
+                    "y": -116.5
+                },
+                "control_behavior": {
+                    "sections": {
+                        "sections": [
+                            {
+                                "index": 1,
+                                "filters": [
+                                    {
+                                        "index": 1,
+                                        "type": "virtual",
+                                        "name": "signal-W",
+                                        "quality": "normal",
+                                        "comparator": "=",
+                                        "count": 1
+                                    },
+                                    {
+                                        "index": 2,
+                                        "type": "virtual",
+                                        "name": "signal-W",
+                                        "quality": "legendary",
+                                        "comparator": "=",
+                                        "count": 1
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "item": "blueprint",
+        "version": 562949954928640
+    }
+}
