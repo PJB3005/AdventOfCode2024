@@ -12,6 +12,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day03", "Day03\Day03.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day03.Two", "Day03.Two\Day03.Two.csproj", "{DB82C278-EE21-492F-8900-56E8CE7D809D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{76C8AD21-71AA-4C1A-AC8F-8D442D95BCB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day04", "Day04\Day04.csproj", "{CE033ABD-E206-499A-803F-0F06F85A763D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day04.Two", "Day04.Two\Day04.Two.csproj", "{A4A98596-C618-4A0C-A231-5A0B737B3D3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +48,17 @@ Global
 		{DB82C278-EE21-492F-8900-56E8CE7D809D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB82C278-EE21-492F-8900-56E8CE7D809D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB82C278-EE21-492F-8900-56E8CE7D809D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C8AD21-71AA-4C1A-AC8F-8D442D95BCB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C8AD21-71AA-4C1A-AC8F-8D442D95BCB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C8AD21-71AA-4C1A-AC8F-8D442D95BCB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C8AD21-71AA-4C1A-AC8F-8D442D95BCB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE033ABD-E206-499A-803F-0F06F85A763D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE033ABD-E206-499A-803F-0F06F85A763D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE033ABD-E206-499A-803F-0F06F85A763D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE033ABD-E206-499A-803F-0F06F85A763D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A98596-C618-4A0C-A231-5A0B737B3D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A98596-C618-4A0C-A231-5A0B737B3D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A98596-C618-4A0C-A231-5A0B737B3D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A98596-C618-4A0C-A231-5A0B737B3D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
