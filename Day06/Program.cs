@@ -138,22 +138,6 @@ internal struct Cell
     public bool Visited;
 }
 
-internal struct Vector2i(int x, int y)
-{
-    public int X = x;
-    public int Y = y;
-
-    public static Vector2i operator +(Vector2i left, Vector2i right)
-    {
-        return new Vector2i(left.X + right.X, left.Y + right.Y);
-    }
-
-    public override string ToString()
-    {
-        return $"{X}, {Y}";
-    }
-}
-
 enum GuardDir
 {
     Up,
